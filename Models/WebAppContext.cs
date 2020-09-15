@@ -17,14 +17,6 @@ namespace MagSubApp.Models
 
         public virtual DbSet<Webappmaster> Webappmaster { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//                optionsBuilder.UseSqlServer("Server=LAPTOP-OD274E6F;Database=WebApp;Integrated Security=True");
-//            }
-//        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Webappmaster>(entity =>
