@@ -28,22 +28,22 @@ namespace MagSubApp.Controllers
         }
 
         // GET: Webapp/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var webappmaster = await _context.Webappmaster
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (webappmaster == null)
-            {
-                return NotFound();
-            }
+        //    var webappmaster = await _context.Webappmaster
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    if (webappmaster == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(webappmaster);
-        }
+        //    return View(webappmaster);
+        //}
 
         // GET: Webapp/Create
         public IActionResult Create()
@@ -80,84 +80,84 @@ namespace MagSubApp.Controllers
         }
 
         // GET: Webapp/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var webappmaster = await _context.Webappmaster.FindAsync(id);
-            if (webappmaster == null)
-            {
-                return NotFound();
-            }
-            return View(webappmaster);
-        }
+        //    var webappmaster = await _context.Webappmaster.FindAsync(id);
+        //    if (webappmaster == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(webappmaster);
+        //}
 
         // POST: Webapp/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,MagSub")] Webappmaster webappmaster)
-        {
-            if (id != webappmaster.Id)
-            {
-                return NotFound();
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,MagSub")] Webappmaster webappmaster)
+        //{
+        //    if (id != webappmaster.Id)
+        //    {
+        //        return NotFound();
+        //    }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(webappmaster);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!WebappmasterExists(webappmaster.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(webappmaster);
-        }
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            _context.Update(webappmaster);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!WebappmasterExists(webappmaster.Id))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(webappmaster);
+        //}
 
         // GET: Webapp/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var webappmaster = await _context.Webappmaster
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (webappmaster == null)
-            {
-                return NotFound();
-            }
+        //    var webappmaster = await _context.Webappmaster
+        //        .FirstOrDefaultAsync(m => m.Id == id);
+        //    if (webappmaster == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(webappmaster);
-        }
+        //    return View(webappmaster);
+        //}
 
         // POST: Webapp/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var webappmaster = await _context.Webappmaster.FindAsync(id);
-            _context.Webappmaster.Remove(webappmaster);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    var webappmaster = await _context.Webappmaster.FindAsync(id);
+        //    _context.Webappmaster.Remove(webappmaster);
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction(nameof(Index));
+        //}
 
         private bool WebappmasterExists(int id)
         {
