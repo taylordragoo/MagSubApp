@@ -2,8 +2,8 @@
 
 # Description
 
-#Installing and running locally
+# Installing and running locally
 
-#Contributing guide
+# Contributing guide
 
-#Future ideas for project
+# Future ideas for project
