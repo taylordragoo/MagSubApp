@@ -77,8 +77,6 @@ namespace MagSubApp.Controllers
                 // Set and then normalize the domain
                 email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
                                       RegexOptions.None, TimeSpan.FromMilliseconds(200));
-
-                // look
                 string DomainMapper(Match match)
                 {
                     var idn = new IdnMapping();
